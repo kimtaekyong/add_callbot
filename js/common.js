@@ -13,7 +13,7 @@ function includeHTML(url, elementId) {
 
 // 가져올 HTML 파일의 URL과 삽입할 요소의 ID를 전달하여 includeHTML 함수를 호출
 includeHTML("/page/header.html", "header");
-includeHTML("header.html", "header");
+includeHTML("./header.html", "header");
 
 //연결테스트 콘솔//
 const a = () => {
