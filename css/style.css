@@ -20,6 +20,16 @@
   font-weight: 600;
 }
 #wrapper main {
-  background-color: red;
-  display: block;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+#wrapper main button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
