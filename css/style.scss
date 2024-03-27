@@ -20,28 +20,30 @@
   }
   main {
     height: 100vh;
+    padding: 32px 12px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 24px 12px;
     button {
       width: 100%;
-      background-color: #eeeeee;
+      background-color: #0923a9;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       margin: 0 auto;
       padding: 18px 0;
-      color: #b2b2b2;
+      color: #fff;
       font-weight: 700;
       font-size: 14px;
     }
     .contant__desc {
       .page__title {
-        font-size: 32px;
+        font-size: 38px;
         font-weight: 700;
         margin-bottom: 6px;
+        letter-spacing: -0.5px;
       }
       p {
         font-size: 15px;
