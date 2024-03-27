@@ -3,7 +3,7 @@
   max-width: 768px;
   margin: 0 auto;
   header {
-    background-color: #fafafa;
+    border-bottom: 1px solid #eee;
     height: 60px;
     display: flex;
     align-items: center;
@@ -19,17 +19,37 @@
     }
   }
   main {
-    height: 100vh;
+    height: calc(100vh / 1 - 60px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 12px;
+    padding: 24px 12px;
     button {
+      width: 100%;
+      background-color: #eeeeee;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       margin: 0 auto;
+      padding: 18px 0;
+      color: #b2b2b2;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .contant__desc {
+      .page__title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        word-break: keep-all;
+        letter-spacing: 0;
+      }
     }
   }
 }

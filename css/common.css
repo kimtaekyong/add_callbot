@@ -39,7 +39,12 @@
   src: local("Pretendard Thin"), url(./fonts/Pretendard-Thin.woff2) format("woff2"),
     url(./fonts/Pretendard-Thin.woff2) format("woff");
 }
-
+html,
+body {
+  height: 100%;
+  letter-spacing: -0.25px;
+  color: #1e1f24;
+}
 body {
   font-family: "Pretendard";
 }

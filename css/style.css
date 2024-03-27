@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 #wrapper header {
-  background-color: #fafafa;
+  border-bottom: 1px solid #eee;
   height: 60px;
   display: flex;
   align-items: center;
@@ -20,16 +20,34 @@
   font-weight: 600;
 }
 #wrapper main {
-  height: 100vh;
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 24px 12px;
 }
 #wrapper main button {
+  width: 100%;
+  background-color: #eeeeee;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0 auto;
+  padding: 18px 0;
+  color: #b2b2b2;
+  font-weight: 700;
+  font-size: 14px;
+}
+#wrapper main .contant__desc .page__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#wrapper main .contant__desc p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  word-break: keep-all;
+  letter-spacing: 0;
 }/*# sourceMappingURL=style.css.map */
