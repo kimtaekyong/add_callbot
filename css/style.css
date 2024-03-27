@@ -3,7 +3,7 @@
   max-width: 768px;
   margin: 0 auto;
 }
-#wrapper header {
+#wrapper #header {
   border-bottom: 1px solid #eee;
   height: 60px;
   display: flex;
@@ -12,12 +12,17 @@
   position: relative;
   color: #1e1f24;
 }
-#wrapper header .page__name {
+#wrapper #header .page__name {
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 18px;
   font-weight: 600;
+}
+#wrapper #header button {
+  display: flex;
+  align-items: center;
 }
 #wrapper main {
   height: 100vh;
@@ -52,4 +57,53 @@
   line-height: 20px;
   word-break: keep-all;
   letter-spacing: 0;
+  color: #6b6c70;
+}
+#wrapper main .form__wrap form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+#wrapper main .form__wrap form .input__info {
+  font-size: 12px;
+  padding-left: 12px;
+  padding-top: 6px;
+  color: #1e1f24;
+}
+#wrapper main .form__wrap .form__flex > span {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+#wrapper main .form__wrap .form__flex > span input {
+  width: 100%;
+  height: auto;
+  padding: 14px;
+}
+#wrapper main .form__wrap .form__flex > span button {
+  margin: 0;
+  width: 30%;
+  padding: 12px 0;
+  background: #1e1f24;
+}
+#wrapper main .form__wrap label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+#wrapper main .form__wrap form input {
+  height: 28px;
+  padding: 24px 12px;
+  font-size: 16px;
+  border: none;
+  background-color: #fafafa;
+  border-radius: 0 !important;
+  outline: none;
+  color: #1e1f24;
+}
+#wrapper main .form__wrap form input::-moz-placeholder {
+  color: #b9b9b9;
+}
+#wrapper main .form__wrap form input::placeholder {
+  color: #b9b9b9;
 }/*# sourceMappingURL=style.css.map */
