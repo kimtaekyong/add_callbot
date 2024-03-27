@@ -1,0 +1,25 @@
+#wrapper {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  header {
+    background-color: #fafafa;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    position: relative;
+    color: #1e1f24;
+    .page__name {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  main {
+    background-color: red;
+    display: block;
+  }
+}
