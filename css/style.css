@@ -59,10 +59,19 @@
   letter-spacing: 0;
   color: #6b6c70;
 }
+#wrapper main .form__wrap .form__data {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1e1f24;
+}
+#wrapper main .form__wrap .form__data h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
 #wrapper main .form__wrap form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 #wrapper main .form__wrap form .input__info {
   font-size: 12px;

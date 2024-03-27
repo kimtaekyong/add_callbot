@@ -60,10 +60,19 @@
       }
     }
     .form__wrap {
+      .form__data {
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #1e1f24;
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
       form {
         display: flex;
         flex-direction: column;
-        margin-bottom: 14px;
+        margin-bottom: 18px;
         .input__info {
           font-size: 12px;
           padding-left: 12px;
