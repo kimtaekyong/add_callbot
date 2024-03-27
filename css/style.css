@@ -20,7 +20,7 @@
   font-weight: 600;
 }
 #wrapper main {
-  height: calc(100vh - 60px);
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,7 +42,7 @@
 #wrapper main .contant__desc .page__title {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 #wrapper main .contant__desc p {
   font-size: 15px;
