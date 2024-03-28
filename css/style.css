@@ -78,6 +78,7 @@
   padding-left: 12px;
   padding-top: 6px;
   color: #1e1f24;
+  font-weight: bold;
 }
 #wrapper main .form__wrap .form__flex > span {
   display: flex;
@@ -101,8 +102,7 @@
   margin-bottom: 8px;
 }
 #wrapper main .form__wrap form input {
-  height: 28px;
-  padding: 20px 12px;
+  padding: 14px 12px;
   font-size: 16px;
   border: none;
   background-color: #f5f5f5;
@@ -240,18 +240,21 @@
   font-weight: bold;
   margin-bottom: 8px;
 }
+#wrapper main .check__box #consentForm .radio_checkbox_wrap {
+  margin-bottom: 14px;
+}
 #wrapper main .check__box .consent__checkbox {
   margin: 0 0 12px 0;
 }
 #wrapper main .check__box .consent__checkbox ul {
-  margin-top: 8px;
+  margin-top: 14px;
 }
 #wrapper main .check__box .consent__checkbox ul li > label {
   display: flex;
   align-items: center;
   font-size: 14px;
   gap: 0.35rem;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   font-weight: normal;
 }
 #wrapper main .result__wrap {
