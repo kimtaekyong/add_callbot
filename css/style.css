@@ -60,9 +60,9 @@
   color: #6b6c70;
 }
 #wrapper main .form__wrap .form__data {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #1e1f24;
+  border-bottom: 1px solid #c8c8c8;
 }
 #wrapper main .form__wrap .form__data h3 {
   font-size: 18px;
@@ -82,27 +82,27 @@
 #wrapper main .form__wrap .form__flex > span {
   display: flex;
   width: 100%;
-  flex: 1;
+  gap: 0.35rem;
 }
 #wrapper main .form__wrap .form__flex > span input {
   width: 100%;
   height: auto;
-  padding: 14px;
+  padding: 12px;
 }
 #wrapper main .form__wrap .form__flex > span button {
   margin: 0;
-  width: 30%;
-  padding: 12px 0;
+  width: 24%;
+  padding: 8px 0;
   background: #1e1f24;
 }
 #wrapper main .form__wrap label {
-  margin-bottom: 8px;
   font-size: 14px;
   font-weight: bold;
+  margin-bottom: 8px;
 }
 #wrapper main .form__wrap form input {
   height: 28px;
-  padding: 24px 12px;
+  padding: 20px 12px;
   font-size: 16px;
   border: none;
   background-color: #f5f5f5;
@@ -112,17 +112,19 @@
 }
 #wrapper main .form__wrap form input::-moz-placeholder {
   color: #b9b9b9;
+  font-size: 14px;
 }
 #wrapper main .form__wrap form input::placeholder {
   color: #b9b9b9;
+  font-size: 14px;
 }
 #wrapper main .form__wrap .form__address > input {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 #wrapper main .form__wrap .form__address > span {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 12px;
+  gap: 0.35rem;
+  margin-bottom: 6px;
 }
 #wrapper main .form__wrap .form__address > span input {
   width: 100%;
@@ -132,4 +134,129 @@
   width: 30%;
   padding: 12px 0;
   background: #1e1f24;
+}
+#wrapper main .company_form {
+  border-top: 1px solid #c8c8c8;
+  padding-top: 18px;
+}
+#wrapper main .check__box .form__data.active h3 > i {
+  transform: rotate(180deg);
+}
+#wrapper main .check__box #payment__open_btn {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#wrapper main .check__box #payment__open_btn h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+#wrapper main .check__box #payment__open_btn h3 i {
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+#wrapper main .check__box #paymentForm {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+#wrapper main .check__box #paymentForm label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+#wrapper main .check__box #pay__menu #Card__number {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 6px;
+  border-bottom: 1px solid #c8c8c8;
+  margin-bottom: 14px;
+}
+#wrapper main .check__box #pay__menu #Card__number::-moz-placeholder {
+  font-size: 14px;
+  color: #1e1f24;
+}
+#wrapper main .check__box #pay__menu #Card__number::placeholder {
+  font-size: 14px;
+  color: #1e1f24;
+}
+#wrapper main .check__box #pay__menu .datepiker h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+#wrapper main .check__box #pay__menu .datepiker .card__dete {
+  display: flex;
+  gap: 0.35rem;
+}
+#wrapper main .check__box #pay__menu .datepiker .card__dete select {
+  width: 50%;
+  border: none;
+  background-color: #f5f5f5;
+  color: #1e1f24;
+  outline: none;
+  padding: 14px 8px;
+  font-size: 14px;
+}
+#wrapper main .check__box #pay__menu .datepiker button {
+  background-color: #0923a9;
+  margin-top: 0.35rem;
+}
+#wrapper main .check__box #pay__menu .datepiker .effectiveness_info {
+  margin: 12px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+#wrapper main .check__box #pay__menu .datepiker .effectiveness_info label {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+#wrapper main .check__box #pay__menu .datepiker .effectiveness_info label input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
+#wrapper main .check__box #pay__menu .datepiker .effectiveness_info p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #1e1f24;
+  word-break: keep-all;
+  margin-top: -4px;
+}
+#wrapper main .check__box #consentForm {
+  padding-top: 20px;
+  border-top: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
+}
+#wrapper main .check__box #consentForm .consent__title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+#wrapper main .check__box .consent__checkbox {
+  margin: 0 0 12px 0;
+}
+#wrapper main .check__box .consent__checkbox ul {
+  margin-top: 8px;
+}
+#wrapper main .check__box .consent__checkbox ul li > label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 0.35rem;
+  margin-bottom: 4px;
+  font-weight: normal;
+}
+#wrapper main .result__wrap {
+  display: flex;
+  gap: 0.35rem;
+  padding-bottom: 24px;
+}
+#wrapper main .result__wrap #clear_btn {
+  background: none;
+  border: 1px solid #1e1f24;
+  color: #1e1f24;
 }/*# sourceMappingURL=style.css.map */

@@ -12,38 +12,38 @@
     <div id="wrapper">
       <header id="header"></header>
       <main>
-        <div class="form__wrap">
+        <div class="form__wrap basic_form">
           <div class="form__data">
             <h3>기본정보</h3>
           </div>
           <form>
             <label for="name">이름</label>
-            <input type="text" id="name" name="이름" placeholder="이름" />
+            <input type="text" id="name" name="이름" placeholder="홍길동" disabled />
             <span class="input__info">4~12자/영문 소문자(숫자 조합 가능)</span>
           </form>
           <form>
             <label for="id">아이디</label>
-            <input type="text" id="id" name="아이디" placeholder="아이디" />
+            <input type="text" id="id" name="아이디" placeholder="test0101" disabled />
           </form>
           <form class="form__flex">
             <label for="tel">휴대폰</label>
             <span>
-              <input type="tel" id="tel" name="휴대폰번호" placeholder="휴대폰번호" />
-              <button>변경</button>
+              <input type="tel" id="tel" name="휴대폰번호" placeholder="010-2424-4222" disabled />
+              <button onclick="toggleInput('tel')">변경</button>
             </span>
           </form>
           <form class="form__flex">
             <label for="email">이메일</label>
             <span>
-              <input type="email" id="email" name="이메일" placeholder="이메일" />
-              <button>변경</button>
+              <input type="email" id="email" name="이메일" placeholder="text@boram.com" disabled />
+              <button onclick="toggleInput('email')">변경</button>
             </span>
           </form>
           <form class="form__address">
             <label>주소</label>
             <span>
               <input type="text" id="sample4_postcode" placeholder="우편번호" />
-              <button type="button" onclick="sample4_execDaumPostcode()">우편번호</button>
+              <button type="button" onclick="sample4_execDaumPostcode()">주소찾기</button>
             </span>
             <input type="text" id="sample4_roadAddress" placeholder="도로명주소" />
             <input type="text" id="sample4_jibunAddress" style="color: #999; display: none" placeholder="지번주소" />
@@ -52,10 +52,162 @@
             <input type="text" id="sample4_extraAddress" style="color: #999; display: none" placeholder="참고항목" />
           </form>
         </div>
+        <div class="form__wrap company_form">
+          <form>
+            <label for="company__name">직장명</label>
+            <input type="text" id="company__name" name="직장명" placeholder="직장명" />
+          </form>
+          <form class="form__flex">
+            <label for="company__number">직장 연락처</label>
+            <span>
+              <input type="tel" id="company__number" name="직장 연락처" placeholder="직장 연락처" />
+              <button>변경</button>
+            </span>
+          </form>
+          <form class="form__address">
+            <label>직장주소</label>
+            <span>
+              <input type="text" id="sample4_postcode" placeholder="우편번호" />
+              <button type="button" onclick="sample4_execDaumPostcode()">주소찾기</button>
+            </span>
+            <input type="text" id="sample4_roadAddress" placeholder="도로명주소" />
+            <input type="text" id="sample4_jibunAddress" style="color: #999; display: none" placeholder="지번주소" />
+            <span id="guide" style="color: #999; display: none"></span>
+            <input type="text" id="sample4_detailAddress" placeholder="상세주소" />
+            <input type="text" id="sample4_extraAddress" style="color: #999; display: none" placeholder="참고항목" />
+          </form>
+        </div>
+        <div class="form__wrap check__box">
+          <div class="form__data" id="payment__open_btn">
+            <h3>
+              납입방법<i
+                ><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_12_3)">
+                    <path
+                      d="M12.0006 10.6359L5.77861 17L4 15.1821L12.0006 7L20 15.1821L18.2226 17L12.0006 10.6359Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_12_3">
+                      <rect width="24" height="24" fill="white" transform="translate(24) rotate(90)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </i>
+            </h3>
+          </div>
+          <form id="paymentForm">
+            <label for="creditCard">
+              <input
+                type="radio"
+                id="creditCard"
+                name="paymentMethod"
+                value="creditCard"
+                checked
+                onclick="togglePaymentSelection()"
+              />
+              신용카드 결제
+            </label>
+            <label for="bankTransfer">
+              <input
+                type="radio"
+                id="bankTransfer"
+                name="paymentMethod"
+                value="bankTransfer"
+                onclick="togglePaymentSelection()"
+              />
+              무통장 입금
+            </label>
+          </form>
+          <div id="pay__menu">
+            <div id="creditCardMenu" class="">
+              <!-- 여기에 신용카드 관련 메뉴를 추가 -->
+              <input
+                id="Card__number"
+                oninput="handleOnInput(this, 20)"
+                type="number"
+                max="12"
+                placeholder="'-' 없이 카드번호 입력"
+              />
+              <div class="datepiker">
+                <h3>유효기간</h3>
+                <div class="card__dete">
+                  <select id="yearSelect">
+                    <option value="">연도 선택</option>
+                  </select>
+                  <select id="monthSelect">
+                    <option value="">월 선택</option>
+                  </select>
+                </div>
+                <button onclick="alert('유효성 검사 중');">카드 유효성 체크</button>
+                <div class="effectiveness_info">
+                  <label for="card_effectiveness">
+                    <input
+                      type="checkbox"
+                      id="creditCard"
+                      name="paymentMethod"
+                      value="creditCard"
+                      onclick="togglePaymentSelection()"
+                    />
+                  </label>
+                  <p>(필수) 납부요금에 대해 위 카드번호(계좌)에서 지정된 출금일에 결제되는 것에 동의합니다.</p>
+                </div>
+              </div>
+            </div>
+            <div id="bankTransferMenu" class="hidden">
+              <!-- 여기에 무통장 입금 관련 메뉴를 추가 -->
+              <p>무통장 입금 정보 입력란</p>
+            </div>
+          </div>
+          <div class="sms__wrap">
+            <form id="consentForm">
+              <div class="radio_checkbox_wrap">
+                <span class="consent__title">SMS 수신동의</span>
+                <div class="sms__radio_checkbox consent__checkbox">
+                  <ul>
+                    <li>
+                      <label for="smsConsent_true"
+                        ><input type="radio" id="smsConsent_true" name="sms" value="수신" checked /> 수신
+                      </label>
+                    </li>
+                    <li>
+                      <label for="smsConsent_null">
+                        <input type="radio" id="smsConsent_null" name="sms" value="수신하지 않음" /> 수신하지 않음
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="radio_checkbox_wrap">
+                <span class="consent__title">이메일 수신동의</span>
+                <div class="email__radio_checkbox consent__checkbox">
+                  <ul>
+                    <li>
+                      <label for="emilConsent_true"
+                        ><input type="radio" id="emilConsent_true" name="email" value="수신" checked /> 수신
+                      </label>
+                    </li>
+                    <li>
+                      <label for="emilConsent_null">
+                        <input type="radio" id="emilConsent_null" name="email" value="수신하지 않음" /> 수신하지 않음
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="result__wrap">
+          <button id="clear_btn">취소</button>
+          <button class="result_ture" onclick="alert('확인되었습니다.')">확인</button>
+        </div>
       </main>
     </div>
   </body>
   <script src="./js/common.js"></script>
+  <script src="./js/datepiker.js"></script>
   <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   <script>
     //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
@@ -111,6 +263,14 @@
           }
         },
       }).open();
+    }
+  </script>
+  <script>
+    // 카드번호 최대 20자리 제한
+    function handleOnInput(el, maxlength) {
+      if (el.value.length > maxlength) {
+        el.value = el.value.substr(0, maxlength);
+      }
     }
   </script>
 </html>
