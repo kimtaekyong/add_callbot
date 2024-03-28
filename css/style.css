@@ -167,6 +167,10 @@
   align-items: center;
   gap: 0.35rem;
 }
+#wrapper main .check__box #paymentForm label input[type=radio] {
+  width: 12px;
+  height: 12px;
+}
 #wrapper main .check__box #pay__menu #Card__number {
   width: 100%;
   border: none;

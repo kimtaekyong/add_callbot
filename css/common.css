@@ -62,3 +62,21 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* 아이폰 스타일 */
+.iphone input {
+  /* 아이폰에서의 스타일 */
+  color: blue; /* 아이폰에서의 예시 스타일 */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* 안드로이드 스타일 */
+.android input {
+  /* 안드로이드에서의 스타일 */
+  color: red; /* 안드로이드에서의 예시 스타일 */
+  appearance: block;
+  -webkit-appearance: block;
+  -moz-appearance: block;
+}

@@ -1,6 +1,17 @@
 //모바일 100vh 변환 자바스크립트//
 document.querySelector("main").style.height = window.innerHeight - 60 + "px";
 
+function checkMobileDevice() {
+  const userAgent = navigator.userAgent;
+  if (userAgent.match(/iPhone|iPod|iPad/i)) {
+    // 아이폰이나 아이팟, 아이패드인 경우
+    document.body.classList.add("iphone");
+  } else if (userAgent.match(/Android/i)) {
+    // 안드로이드 기기인 경우
+    document.body.classList.add("android");
+  }
+}
+
 // 외부 HTML 파일을 가져오는 함수
 function includeHTML(url, elementId) {
   fetch(url)
@@ -64,6 +75,10 @@ goBackButton.addEventListener("click", () => {
   window.history.back(); // 뒤로가기 기능을 수행하는 window.history.back() 함수 호출
 });
 
+// 페이지가 로드되면 사용자 디바이스 정보를 확인하여 스타일 적용
+window.onload = function () {
+  checkMobileDevice();
+};
 a();
 togglePaymentSelection();
 togglePaymentMenu();
