@@ -37,14 +37,14 @@ const togglePaymentMenu = () => {
   const paymentopenBtn = document.getElementById("payment__open_btn");
   const paymentMenu = document.getElementById("pay__menu");
 
-  paymentMenu.style.display = "none";
+  paymentMenu.style.display = "block";
 
   paymentopenBtn.addEventListener("click", () => {
     paymentopenBtn.classList.toggle("active");
     if (paymentopenBtn.classList.contains("active")) {
-      paymentMenu.style.display = "block";
-    } else {
       paymentMenu.style.display = "none";
+    } else {
+      paymentMenu.style.display = "block";
     }
   });
 };

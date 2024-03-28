@@ -62,9 +62,87 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* 라디오 버튼 숨기기 */
+input[type="radio"] {
+  display: none;
+}
+/* 체크되지 않은 상태의 이미지 */
+.custom-radio svg:first-child {
+  display: block;
+}
+/* 체크된 상태의 이미지 */
+.custom-radio svg:last-child {
+  display: none;
+}
+/* 라디오 버튼 선택 시 색상 변경 */
+input[type="radio"]:checked + .custom-radio svg:first-child {
+  display: none;
+}
+input[type="radio"]:checked + .custom-radio svg:last-child {
+  display: block;
+}
+/* 체크박스 숨기기 */
+input[type="checkbox"] {
+  display: none;
+}
+/* 체크되지 않은 상태의 이미지 */
+.custom-checkbox svg:first-child {
+  display: block;
+}
+/* 체크된 상태의 이미지 */
+.custom-checkbox svg:last-child {
+  display: none;
+}
+/* 체크박스 선택 시 색상 변경 */
+input[type="checkbox"]:checked + .custom-checkbox svg:first-child {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox svg:last-child {
+  display: block;
+}
+
 input[type="text"],
 input[type="number"],
 select {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+}
+
+/* 셀렉트 박스 스타일 */
+.select-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+}
+/* 셀렉트 박스 라벨 스타일 */
+.select-label {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+/* 셀렉트 박스 옵션 리스트 스타일 */
+.option-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+/* 셀렉트 박스 옵션 스타일 */
+.option-item {
+  padding: 14px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  gap: 1rem;
 }
