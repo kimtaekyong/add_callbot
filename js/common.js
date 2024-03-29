@@ -49,11 +49,11 @@ const togglePaymentMenu = () => {
   });
 };
 // 카드번호 최대 20자리 제한
-function handleOnInput(el, maxlength) {
+const handleOnInput = (el, maxlength) => {
   if (el.value.length > maxlength) {
     el.value = el.value.substr(0, maxlength);
   }
-}
+};
 //연결테스트 콘솔//
 const a = () => {
   console.log("연결 테스트");

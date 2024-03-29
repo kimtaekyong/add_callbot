@@ -28,15 +28,24 @@
           <form class="form__flex">
             <label for="tel">휴대폰</label>
             <span>
-              <input type="tel" id="tel" name="휴대폰번호" placeholder="010-2424-4222" disabled />
-              <button onclick="toggleInput('tel')">변경</button>
+              <input
+                type="tel"
+                id="tel"
+                name="휴대폰번호"
+                placeholder="변경 될 휴대번호"
+                disabled
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); handleOnInput(this, 11)"
+              />
+              <button id="change__number_btn" onclick="toggleInput('tel')">변경</button>
             </span>
+            <div id="change__number_wrap">
+              <button id="change__number_result" onclick="alert('API 인증호출')">휴대폰 본인 인증</button>
+            </div>
           </form>
           <form class="form__flex">
             <label for="email">이메일</label>
             <span>
               <input type="email" id="email" name="이메일" placeholder="text@boram.com" disabled />
-              <button onclick="toggleInput('email')">변경</button>
             </span>
           </form>
           <form class="form__address">
@@ -55,13 +64,12 @@
         <div class="form__wrap company_form">
           <form>
             <label for="company__name">직장명</label>
-            <input type="text" id="company__name" name="직장명" placeholder="직장명" />
+            <input type="text" id="company__name" name="직장명" placeholder="보람정보산업" disabled />
           </form>
           <form class="form__flex">
             <label for="company__number">직장 연락처</label>
             <span>
-              <input type="tel" id="company__number" name="직장 연락처" placeholder="직장 연락처" />
-              <button>변경</button>
+              <input type="tel" id="company__number" name="직장 연락처" placeholder="02-000-0000" disabled />
             </span>
           </form>
           <form class="form__address">
@@ -124,7 +132,6 @@
                     </clipPath>
                   </defs>
                 </svg>
-
                 <!-- 체크된 상태의 SVG 이미지 -->
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_22_20)">
@@ -301,6 +308,13 @@
                   <!-- 필요한 만큼 옵션 항목 추가 -->
                 </ul>
               </div>
+              <input
+                id="bank__number"
+                oninput="handleOnInput(this, 20)"
+                type="number"
+                max="12"
+                placeholder="'-' 없이 계좌번호 입력"
+              />
               <button onclick="alert('유효성 검사 중');">계좌 유효성 체크</button>
               <div class="effectiveness_info">
                 <label for="bank_effectiveness">
@@ -727,5 +741,25 @@
         console.log("체크");
       }
     });
+  </script>
+  <script>
+    function toggleInput(inputId) {
+      var inputElement = document.getElementById(inputId);
+      var buttonElement = document.getElementById("change__number_btn");
+      var deopbb = document.getElementById("change__number_wrap");
+      event.preventDefault();
+
+      if (inputElement.disabled) {
+        inputElement.disabled = false;
+        buttonElement.textContent = "취소";
+        deopbb.classList.add("active");
+        inputElement.placeholder = "새로운 휴대번호를 입력하세요";
+      } else {
+        inputElement.disabled = true;
+        buttonElement.textContent = "변경";
+        deopbb.classList.remove("active");
+        inputElement.placeholder = "변경 될 휴대번호";
+      }
+    }
   </script>
 </html>

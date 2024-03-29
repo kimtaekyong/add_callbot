@@ -79,6 +79,16 @@
   color: #1e1f24;
   font-weight: bold;
 }
+#wrapper main .form__wrap .form__flex #change__number_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+  display: none;
+}
+#wrapper main .form__wrap .form__flex #change__number_wrap.active {
+  display: block;
+}
 #wrapper main .form__wrap .form__flex > span {
   display: flex;
   width: 100%;
@@ -259,6 +269,17 @@
   background: none;
   border: 1px solid #1e1f24;
   color: #1e1f24;
+}
+#wrapper main #bankTransferMenu .select-box {
+  margin-bottom: 8px;
+}
+#wrapper main #bankTransferMenu #bank__number {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 6px;
+  border-bottom: 1px solid #c8c8c8;
+  margin-bottom: 8px;
 }
 #wrapper main #bankTransferMenu h3 {
   font-size: 14px;

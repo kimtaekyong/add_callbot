@@ -80,6 +80,18 @@
           font-weight: bold;
         }
       }
+      .form__flex {
+        #change__number_wrap {
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+          margin-top: 0.35rem;
+          display: none;
+          &.active {
+            display: block;
+          }
+        }
+      }
       .form__flex > span {
         display: flex;
         width: 100%;
@@ -265,6 +277,17 @@
       }
     }
     #bankTransferMenu {
+      .select-box {
+        margin-bottom: 8px;
+      }
+      #bank__number {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 12px 6px;
+        border-bottom: 1px solid #c8c8c8;
+        margin-bottom: 8px;
+      }
       h3 {
         font-size: 14px;
         font-weight: bold;
