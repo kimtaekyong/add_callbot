@@ -21,7 +21,6 @@
               id="change__number"
               oninput="handleOnInput(this, 11)"
               placeholder="'-' 없이 입력 해주세요."
-              value="01011111111"
             />
           </form>
         </div>
@@ -36,7 +35,7 @@
               </svg>
             </button>
             <div class="warning__text">
-              <h3>회원님 재 확인 부탁드립니다.</h3>
+              <h3>회원님 다시 한번 확인 부탁드립니다.</h3>
               <p>입력 된 연락처로 회원조회가 진행이 불가하여, 유선으로 상담사 연결 부탁드리겠습니다.</p>
             </div>
             <span class="cs_center_number">1588-7979</span>
@@ -48,14 +47,15 @@
   </body>
   <script src="./js/common.js"></script>
   <script>
+    var savedData = "01011111111";
+
     document.getElementById("submit__btn").addEventListener("click", function (event) {
       event.preventDefault(); // 기본 제출 이벤트 방지
 
-      var inputElement = document.getElementById("change__number");
-      var inputValue = inputElement.value.trim();
-      var originalValue = inputElement.getAttribute("value").trim();
+      var inputNumber = document.getElementById("change__number").value;
 
-      if (inputValue === originalValue && inputValue === "01011111111") {
+      // 입력된 숫자와 저장된 데이터 비교
+      if (inputNumber === savedData) {
         alert("확인되셨습니다.");
         window.location.href = "success_form.html"; // 확인되면 페이지 이동
       } else {

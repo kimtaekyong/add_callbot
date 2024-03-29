@@ -51,6 +51,10 @@ body {
 .hidden {
   display: none;
 }
+.input {
+  font-family: "Pretendard" !important;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
