@@ -718,4 +718,14 @@
       }
     });
   </script>
+  <script>
+    document.getElementById("myButton").addEventListener("click", function () {
+      var checkbox = document.getElementById("bank_effectiveness");
+      if (!checkbox.checked) {
+        console.log("미체크");
+      } else {
+        console.log("체크");
+      }
+    });
+  </script>
 </html>

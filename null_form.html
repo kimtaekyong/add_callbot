@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <title>보람상조 회원정보 변경</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header"></header>
+      <main class="warning__layout">
+        <div class="contant__desc null__desc">
+          <h2 class="page__title">인증실패</h2>
+          <p>휴대폰 본인 인증에 실패하셨습니다. 휴대폰 번호를 변경하셨다면 변경 전 휴대폰 번호를 입력하세요.</p>
+          <form>
+            <input
+              type="number"
+              id="change__number"
+              oninput="handleOnInput(this, 11)"
+              placeholder="'-' 없이 입력 해주세요."
+              value="01011111111"
+            />
+          </form>
+        </div>
+        <div id="warning__model">
+          <div class="model">
+            <button id="model__close">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.4 17L7 15.6L10.6 12L7 8.42502L8.4 7.02502L12 10.625L15.575 7.02502L16.975 8.42502L13.375 12L16.975 15.6L15.575 17L12 13.4L8.4 17Z"
+                  fill="#111111"
+                />
+              </svg>
+            </button>
+            <div class="warning__text">
+              <h3>회원님 재 확인 부탁드립니다.</h3>
+              <p>입력 된 연락처로 회원조회가 진행이 불가하여, 유선으로 상담사 연결 부탁드리겠습니다.</p>
+            </div>
+            <span class="cs_center_number">1588-7979</span>
+          </div>
+        </div>
+        <button id="submit__btn">확인</button>
+      </main>
+    </div>
+  </body>
+  <script src="./js/common.js"></script>
+  <script>
+    document.getElementById("submit__btn").addEventListener("click", function (event) {
+      event.preventDefault(); // 기본 제출 이벤트 방지
+
+      var inputElement = document.getElementById("change__number");
+      var inputValue = inputElement.value.trim();
+      var originalValue = inputElement.getAttribute("value").trim();
+
+      if (inputValue === originalValue && inputValue === "01011111111") {
+        alert("확인되셨습니다.");
+        window.location.href = "success_form.html"; // 확인되면 페이지 이동
+      } else {
+        document.getElementById("warning__model").classList.add("active");
+      }
+    });
+
+    // 경고 모달 닫기 버튼 클릭 이벤트
+    document.getElementById("model__close").addEventListener("click", function () {
+      document.getElementById("warning__model").classList.remove("active");
+    });
+  </script>
+</html>
