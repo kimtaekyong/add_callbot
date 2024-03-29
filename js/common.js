@@ -32,7 +32,7 @@ const togglePaymentSelection = () => {
 
   bankTransferRadio.addEventListener("click", () => {
     creditCardRadio.checked = false;
-    cardeffectiveness.checked = false;
+    bankeffectiveness.checked = false;
     creditCardMenu.classList.add("hidden");
     bankTransferMenu.classList.remove("hidden");
   });
@@ -72,3 +72,4 @@ goBackButton.addEventListener("click", () => {
 a();
 togglePaymentSelection();
 togglePaymentMenu();
+goBackButton();
