@@ -326,9 +326,11 @@
       border-top-right-radius: 12px;
       transition: all 0.25s;
       box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+      visibility: hidden;
       &.active {
         height: 50vh;
         transition: all 0.5s;
+        visibility: visible;
       }
       .model {
         position: relative;
