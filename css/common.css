@@ -78,10 +78,11 @@ select {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
-.null__desc input[type="number"] {
+.null__desc input[type="number"],
+#creditCardMenu input[type="number"],
+#bankTransferMenu input[type="number"] {
   -webkit-border-radius: 0;
   -webkit-appearance: auto;
-  background-color: red;
 }
 
 /* 셀렉트 박스 스타일 */
