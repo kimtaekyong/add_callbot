@@ -19,7 +19,7 @@
             <input
               type="number"
               id="change__number"
-              oninput="handleOnInput(this, 11)"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); handleOnInput(this, 11)"
               placeholder="'-' 없이 입력 해주세요."
             />
           </form>
