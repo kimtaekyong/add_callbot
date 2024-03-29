@@ -637,7 +637,7 @@
         </div>
         <div class="result__wrap">
           <button id="clear_btn">취소</button>
-          <button class="result_ture" onclick="alert('확인되었습니다.')">확인</button>
+          <button id="result_ture" onclick="checkCheckbox()">확인</button>
         </div>
       </main>
     </div>
@@ -787,16 +787,6 @@
     });
   </script>
   <script>
-    document.getElementById("myButton").addEventListener("click", function () {
-      var checkbox = document.getElementById("bank_effectiveness");
-      if (!checkbox.checked) {
-        console.log("미체크");
-      } else {
-        console.log("체크");
-      }
-    });
-  </script>
-  <script>
     function toggleInput(inputId) {
       var inputElement = document.getElementById(inputId);
       var buttonElement = document.getElementById("change__number_btn");
@@ -809,6 +799,19 @@
         deopbb.classList.add("active");
         inputElement.placeholder = "새로운 휴대번호를 입력하세요";
       } else {
+      }
+    }
+  </script>
+  <script>
+    function checkCheckbox() {
+      var checkbox = document.getElementById("card_effectiveness");
+      var checkbox1 = document.getElementById("bank_effectiveness");
+      // 추가 체크박스 변수를 만든다면 여기에 추가할 수 있습니다
+
+      if ((checkbox.checked && !checkbox1.checked) || (!checkbox.checked && checkbox1.checked)) {
+        alert("회원정보가 변경되었습니다.");
+      } else {
+        alert("카드 또는 은행 중 하나의 유효성 체크를 진행해주세요.");
       }
     }
   </script>

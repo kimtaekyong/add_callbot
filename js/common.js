@@ -20,14 +20,19 @@ const togglePaymentSelection = () => {
   const creditCardMenu = document.getElementById("creditCardMenu");
   const bankTransferMenu = document.getElementById("bankTransferMenu");
 
+  const bankeffectiveness = document.getElementById("bank_effectiveness");
+  const cardeffectiveness = document.getElementById("card_effectiveness");
+
   creditCardRadio.addEventListener("click", () => {
     bankTransferRadio.checked = false;
+    bankeffectiveness.checked = false;
     creditCardMenu.classList.remove("hidden");
     bankTransferMenu.classList.add("hidden");
   });
 
   bankTransferRadio.addEventListener("click", () => {
     creditCardRadio.checked = false;
+    cardeffectiveness.checked = false;
     creditCardMenu.classList.add("hidden");
     bankTransferMenu.classList.remove("hidden");
   });
@@ -67,4 +72,3 @@ goBackButton.addEventListener("click", () => {
 a();
 togglePaymentSelection();
 togglePaymentMenu();
-goBackButton();
