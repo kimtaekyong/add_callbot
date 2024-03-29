@@ -113,6 +113,9 @@ select {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
+.null__desc input[type="number"] {
+  -webkit-border-radius: 0;
+}
 
 /* 셀렉트 박스 스타일 */
 .select-box {
