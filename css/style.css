@@ -35,7 +35,7 @@
 }
 #wrapper main button {
   width: 100%;
-  height: 60px;
+  height: 54px;
   background-color: #0923a9;
   display: flex;
   justify-content: center;
@@ -90,7 +90,7 @@
 }
 #wrapper main .form__wrap .form__flex > span input {
   width: 100%;
-  height: 60px;
+  height: 54px;
   padding: 12px;
 }
 #wrapper main .form__wrap .form__flex > span button {
@@ -101,14 +101,14 @@
   font-weight: normal;
 }
 #wrapper main .form__wrap label {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   margin-bottom: 12px;
 }
 #wrapper main .form__wrap form input {
   padding: 14px 12px;
   font-size: 16px;
-  height: 60px;
+  height: 54px;
   border: none;
   background-color: #f5f5f5;
   border-radius: 0 !important;
@@ -125,7 +125,7 @@
 }
 #wrapper main .form__wrap .form__address > input {
   margin-bottom: 6px;
-  height: 60px;
+  height: 54px;
 }
 #wrapper main .form__wrap .form__address > span {
   display: flex;
@@ -134,7 +134,7 @@
 }
 #wrapper main .form__wrap .form__address > span input {
   width: 100%;
-  height: 60px;
+  height: 54px;
 }
 #wrapper main .form__wrap .form__address > span button {
   margin: 0;
@@ -196,13 +196,19 @@
   color: #1e1f24;
 }
 #wrapper main .check__box #pay__menu .datepiker h3 {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 12px;
 }
 #wrapper main .check__box #pay__menu .datepiker .card__dete {
   display: flex;
+  align-items: center;
   gap: 0.35rem;
+}
+#wrapper main .check__box #pay__menu .datepiker .card__dete span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e1f24;
 }
 #wrapper main .check__box #pay__menu .datepiker .card__dete select {
   width: 50%;
@@ -211,8 +217,8 @@
   color: #1e1f24;
   outline: none;
   padding: 14px 8px;
-  font-size: 15px;
-  height: 60px;
+  font-size: 14px;
+  height: 54px;
   font-weight: bold;
 }
 #wrapper main .check__box #pay__menu .datepiker button {
@@ -312,6 +318,7 @@
   height: 60px;
   display: flex;
   align-items: center;
+  font-size: 15px;
 }
 #wrapper main #bankTransferMenu .effectiveness_info {
   margin: 12px 0;
@@ -333,7 +340,7 @@
 }
 #wrapper .warning__layout .null__desc input {
   width: 100%;
-  height: 60px;
+  height: 54px;
   padding: 12px;
   outline: none;
   background: #f5f5f5;
