@@ -215,6 +215,7 @@
 #wrapper main .check__box #pay__menu .datepiker .card__dete select {
   width: 50%;
   border: none;
+  background-color: #fff;
   border-bottom: 1px solid #c8c8c8;
   color: #1e1f24;
   outline: none;
