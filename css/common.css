@@ -92,7 +92,10 @@ select {
   position: relative;
   width: 100%;
   margin-bottom: 14px;
+  text-align-last: center;
   text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
 }
 /* 셀렉트 박스 라벨 스타일 */
 .select-label {
