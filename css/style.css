@@ -35,6 +35,7 @@
 }
 #wrapper main button {
   width: 100%;
+  height: 60px;
   background-color: #0923a9;
   display: flex;
   justify-content: center;
@@ -72,13 +73,6 @@
   flex-direction: column;
   margin-bottom: 18px;
 }
-#wrapper main .form__wrap form .input__info {
-  font-size: 12px;
-  padding-left: 12px;
-  padding-top: 6px;
-  color: #1e1f24;
-  font-weight: bold;
-}
 #wrapper main .form__wrap .form__flex #change__number_wrap {
   display: flex;
   flex-direction: column;
@@ -96,7 +90,7 @@
 }
 #wrapper main .form__wrap .form__flex > span input {
   width: 100%;
-  height: auto;
+  height: 60px;
   padding: 12px;
 }
 #wrapper main .form__wrap .form__flex > span button {
@@ -104,15 +98,17 @@
   width: 24%;
   padding: 8px 0;
   background: #1e1f24;
+  font-weight: normal;
 }
 #wrapper main .form__wrap label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 #wrapper main .form__wrap form input {
   padding: 14px 12px;
   font-size: 16px;
+  height: 60px;
   border: none;
   background-color: #f5f5f5;
   border-radius: 0 !important;
@@ -129,6 +125,7 @@
 }
 #wrapper main .form__wrap .form__address > input {
   margin-bottom: 6px;
+  height: 60px;
 }
 #wrapper main .form__wrap .form__address > span {
   display: flex;
@@ -137,12 +134,14 @@
 }
 #wrapper main .form__wrap .form__address > span input {
   width: 100%;
+  height: 60px;
 }
 #wrapper main .form__wrap .form__address > span button {
   margin: 0;
   width: 30%;
   padding: 12px 0;
   background: #1e1f24;
+  font-weight: normal;
 }
 #wrapper main .company_form {
   border-top: 1px solid #c8c8c8;
@@ -175,10 +174,12 @@
   display: flex;
   align-items: center;
   gap: 0.2rem;
+  font-size: 15px;
+  font-weight: 700;
 }
 #wrapper main .check__box #pay__menu #Card__number {
   width: 100%;
-  height: 48px;
+  height: 60px;
   border: none;
   outline: none;
   padding: 12px 6px;
@@ -210,7 +211,9 @@
   color: #1e1f24;
   outline: none;
   padding: 14px 8px;
-  font-size: 14px;
+  font-size: 15px;
+  height: 60px;
+  font-weight: bold;
 }
 #wrapper main .check__box #pay__menu .datepiker button {
   background-color: #0923a9;
@@ -227,8 +230,8 @@
   line-height: 20px;
 }
 #wrapper main .check__box #pay__menu .datepiker .effectiveness_info label input[type=checkbox] {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
 }
 #wrapper main .check__box #pay__menu .datepiker .effectiveness_info p {
   font-size: 14px;
@@ -280,7 +283,7 @@
 }
 #wrapper main #bankTransferMenu #bank__number {
   width: 100%;
-  height: 48px;
+  height: 60px;
   border: none;
   outline: none;
   padding: 12px 6px;
@@ -295,9 +298,9 @@
   font-size: 14px;
 }
 #wrapper main #bankTransferMenu h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 #wrapper main #bankTransferMenu .select-box {
   margin-bottom: 0;
@@ -306,7 +309,9 @@
   margin-bottom: 0;
   border-radius: 0;
   border-bottom: 1px solid #c8c8c8;
-  height: 38px;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 #wrapper main #bankTransferMenu .effectiveness_info {
   margin: 12px 0;
@@ -324,57 +329,57 @@
   overflow-y: hidden;
 }
 #wrapper .warning__layout .null__desc p {
-  padding-bottom: 32px;
+  padding-bottom: 12px;
 }
 #wrapper .warning__layout .null__desc input {
   width: 100%;
-  height: 54px;
+  height: 60px;
   padding: 12px;
   outline: none;
   background: #f5f5f5;
   border: none;
   border-bottom: 1px solid #c8c8c8;
-  font-size: 18px;
+  font-size: 20px;
 }
 #wrapper .warning__layout .null__desc input::-moz-placeholder {
   letter-spacing: 0;
   color: #1e1f24;
-  font-size: 14px;
+  font-size: 16px;
 }
 #wrapper .warning__layout .null__desc input::placeholder {
   letter-spacing: 0;
   color: #1e1f24;
-  font-size: 14px;
+  font-size: 16px;
 }
 #wrapper .warning__layout #warning__model {
-  position: absolute;
-  background: #fff;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 0;
-  left: 0;
-  bottom: 0%;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  transition: all 0.25s;
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  height: 100vh;
   visibility: hidden;
+  left: 0;
+  bottom: 0;
 }
 #wrapper .warning__layout #warning__model.active {
-  height: 55vh;
-  transition: all 0.35s;
   visibility: visible;
 }
-#wrapper .warning__layout #warning__model .model {
-  position: relative;
-  padding: 12px 24px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+#wrapper .warning__layout #warning__model.active .model {
+  visibility: visible;
+  transition: all 0.5s;
+  height: 40vh;
 }
-#wrapper .warning__layout #warning__model .model #model__close {
+#wrapper .warning__layout .model {
   position: absolute;
+  bottom: 0;
+  padding: 12px 24px;
+  height: 0;
   background: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+#wrapper .warning__layout .model #model__close {
+  position: absolute;
+  background: #eee;
   right: 24px;
   top: 16px;
   width: auto;
@@ -384,21 +389,21 @@
   width: 28px;
   height: 28px;
 }
-#wrapper .warning__layout #warning__model .warning__text {
+#wrapper .warning__layout .warning__text {
   position: relative;
   padding-top: 34px;
 }
-#wrapper .warning__layout #warning__model h3 {
+#wrapper .warning__layout h3 {
   font-size: 22px;
   margin-bottom: 12px;
 }
-#wrapper .warning__layout #warning__model p {
+#wrapper .warning__layout p {
   word-break: keep-all;
   margin-bottom: 24px;
   font-size: 16px;
   line-height: 22px;
 }
-#wrapper .warning__layout #warning__model .cs_center_number {
+#wrapper .warning__layout .cs_center_number {
   text-align: center;
   background: #f3f3f3;
   display: block;
