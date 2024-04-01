@@ -179,6 +179,7 @@
   border: 1px solid #c8c8c8;
   padding: 14px 6px;
   margin-bottom: 0;
+  font-weight: normal;
 }
 #wrapper main .check__box #pay__menu #Card__number {
   width: 100%;
@@ -256,7 +257,7 @@
   margin-top: 20px;
 }
 #wrapper main .check__box #consentForm .consent__title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
 }
 #wrapper main .check__box #consentForm .radio_checkbox_wrap {
@@ -272,7 +273,7 @@
 #wrapper main .check__box .consent__checkbox ul li > label {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   gap: 0.2rem;
   font-weight: normal;
   margin-bottom: 0;

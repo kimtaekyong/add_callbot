@@ -124,6 +124,7 @@ select {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border-bottom: 1px solid #f1f1f1;
 }
 .option-item p {
   font-size: 14px;
