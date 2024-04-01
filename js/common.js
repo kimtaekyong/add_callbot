@@ -19,15 +19,22 @@ const togglePaymentSelection = () => {
   const bankTransferRadio = document.getElementById("bankTransfer");
   const creditCardMenu = document.getElementById("creditCardMenu");
   const bankTransferMenu = document.getElementById("bankTransferMenu");
+  const creditbankLabel = document.getElementById("creditbankLabel");
+  const creditCardLabel = document.getElementById("creditCardLabel");
 
   const bankeffectiveness = document.getElementById("bank_effectiveness");
   const cardeffectiveness = document.getElementById("card_effectiveness");
+
+  creditCardLabel.style.borderColor = "#0923a9";
 
   creditCardRadio.addEventListener("click", () => {
     bankTransferRadio.checked = false;
     bankeffectiveness.checked = false;
     creditCardMenu.classList.remove("hidden");
     bankTransferMenu.classList.add("hidden");
+    cardeffectiveness.classList.add("hidden");
+    creditCardLabel.style.borderColor = "#0923a9"; // 신용카드 선택 시 레이블 테두리 색상 변경
+    creditbankLabel.style.borderColor = ""; // 은행 이체 선택 시 레이블 테두리 색상 초기화
   });
 
   bankTransferRadio.addEventListener("click", () => {
@@ -35,8 +42,12 @@ const togglePaymentSelection = () => {
     bankeffectiveness.checked = false;
     creditCardMenu.classList.add("hidden");
     bankTransferMenu.classList.remove("hidden");
+    cardeffectiveness.classList.remove("hidden");
+    creditbankLabel.style.borderColor = "#0923a9"; // 은행 이체 선택 시 레이블 테두리 색상 변경
+    creditCardLabel.style.borderColor = ""; // 신용카드 선택 시 레이블 테두리 색상 초기화
   });
 };
+
 // 납입방법 show / hide 처리 및 애니메이션 컨트롤
 const togglePaymentMenu = () => {
   const paymentopenBtn = document.getElementById("payment__open_btn");

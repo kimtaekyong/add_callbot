@@ -52,6 +52,10 @@ input[type="radio"]:checked + .custom-radio svg:first-child {
 input[type="radio"]:checked + .custom-radio svg:last-child {
   display: block;
 }
+
+input[type="radio"]:checked + #paymentForm label {
+  border: 1px solid red;
+}
 /* 체크박스 숨기기 */
 input[type="checkbox"] {
   display: none;
