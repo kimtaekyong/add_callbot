@@ -28,7 +28,7 @@
 }
 #wrapper main {
   height: 100vh;
-  padding: 48px 24px 32px;
+  padding: 48px 12px 32px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
 }
 #wrapper main button {
   width: 100%;
-  height: 54px;
+  height: 60px;
   background-color: #0923a9;
   display: flex;
   justify-content: center;
@@ -46,12 +46,12 @@
   padding: 18px 0;
   color: #fff;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
 }
 #wrapper main .contant__desc .contant__bage {
   background-color: #0923a9;
   color: #fff;
-  padding: 8px 16px;
+  padding: 8px 14px;
   display: inline-block;
   border-radius: 48px;
   font-size: 14px;
@@ -112,9 +112,11 @@
 #wrapper main .form__wrap .form__flex > span button {
   margin: 0;
   width: 24%;
+  height: 54px;
   padding: 8px 0;
   background: #1e1f24;
   font-weight: normal;
+  font-size: 14px;
 }
 #wrapper main .form__wrap label {
   font-size: 15px;
@@ -155,6 +157,8 @@
 #wrapper main .form__wrap .form__address > span button {
   margin: 0;
   width: 30%;
+  height: 54px;
+  font-size: 14px;
   padding: 12px 0;
   background: #1e1f24;
   font-weight: normal;
@@ -168,12 +172,14 @@
 }
 #wrapper main .check__box #payment__open_btn {
   margin-bottom: 10px;
+  padding-bottom: 0;
   cursor: pointer;
 }
 #wrapper main .check__box #payment__open_btn h3 {
   display: flex;
   align-items: center;
   gap: 0.35rem;
+  font-size: 18px;
 }
 #wrapper main .check__box #payment__open_btn h3 i {
   display: flex;
@@ -193,7 +199,7 @@
   gap: 0.2rem;
   font-size: 15px;
   border: 1px solid #c8c8c8;
-  padding: 14px 10px;
+  padding: 12px 10px;
   margin-bottom: 0;
   font-weight: normal;
 }
@@ -204,7 +210,7 @@
   outline: none;
   padding: 12px 6px;
   border-bottom: 1px solid #c8c8c8;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-size: 16px;
 }
 #wrapper main .check__box #pay__menu #Card__number::-moz-placeholder {
@@ -398,10 +404,11 @@
 }
 #wrapper .warning__layout #warning__model.active .model {
   visibility: visible;
-  transition: all 0.5s;
-  height: 45vh;
+  transition: all 0.35s;
+  height: 50vh;
 }
 #wrapper .warning__layout .model {
+  width: 100%;
   position: absolute;
   bottom: 0;
   padding: 12px 24px 28px;

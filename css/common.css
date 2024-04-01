@@ -122,7 +122,7 @@ select {
 }
 /* 셀렉트 박스 옵션 스타일 */
 .option-item {
-  padding: 14px;
+  padding: 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
