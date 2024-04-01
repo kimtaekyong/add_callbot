@@ -222,6 +222,7 @@
   font-size: 14px;
   height: 54px;
   font-weight: bold;
+  text-align: center;
 }
 #wrapper main .check__box #pay__menu .datepiker button {
   background-color: #0923a9;
@@ -251,6 +252,7 @@
   padding-top: 20px;
   border-top: 1px solid #c8c8c8;
   border-bottom: 1px solid #c8c8c8;
+  margin-top: 20px;
 }
 #wrapper main .check__box #consentForm .consent__title {
   font-size: 14px;
@@ -284,7 +286,7 @@
   color: #1e1f24;
 }
 #wrapper main #bankTransferMenu {
-  margin-top: 14px;
+  margin-top: 30px;
 }
 #wrapper main #bankTransferMenu .select-box {
   margin-bottom: 8px;

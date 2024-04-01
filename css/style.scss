@@ -222,6 +222,7 @@
               font-size: 14px;
               height: 54px;
               font-weight: bold;
+              text-align: center;
             }
           }
           button {
@@ -254,6 +255,7 @@
         padding-top: 20px;
         border-top: 1px solid #c8c8c8;
         border-bottom: 1px solid #c8c8c8;
+        margin-top: 20px;
         .consent__title {
           font-size: 14px;
           font-weight: bold;
@@ -290,7 +292,7 @@
       }
     }
     #bankTransferMenu {
-      margin-top: 14px;
+      margin-top: 30px;
       .select-box {
         margin-bottom: 8px;
       }
