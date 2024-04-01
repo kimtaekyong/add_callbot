@@ -27,7 +27,7 @@
   }
   main {
     height: 100vh;
-    padding: 64px 24px 32px;
+    padding: 48px 24px 32px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,8 @@
         display: inline-block;
         border-radius: 48px;
         font-size: 14px;
-        margin-bottom: 12px;
+        margin-bottom: 18px;
+        font-weight: bold;
       }
       .page__title {
         font-size: 30px;
