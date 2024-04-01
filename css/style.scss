@@ -224,7 +224,10 @@
               font-size: 14px;
               height: 54px;
               font-weight: bold;
+              text-align-last: center;
               text-align: center;
+              -ms-text-align-last: center;
+              -moz-text-align-last: center;
             }
           }
           button {
